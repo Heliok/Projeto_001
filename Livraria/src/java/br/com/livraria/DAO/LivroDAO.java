@@ -24,7 +24,7 @@ public class LivroDAO implements IDAO{
             // Abre uma conexao com o banco.
             Connection conexao = ConexaoPostgres.getConexao();
 
-            String instrucaoSQL = "insert into livro(titulo, ano, edicao, isbn, paginas, sinopse, status, data)"
+            String instrucaoSQL = "insert into livro(titulo, ano, edicao, isbn, paginas, sinopse, status, editora)"
                     + " values(?, ?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement declaracao = conexao.prepareStatement(instrucaoSQL);
             declaracao.setString(1, livro.getTitulo());
@@ -34,9 +34,7 @@ public class LivroDAO implements IDAO{
             declaracao.setInt(5, livro.getPaginas());
             declaracao.setString(6, livro.getSinopse());
             declaracao.setString(7, livro.getStatus());
-            String sValue = "2009/10/10" ; 
-            java.sql.Date data = java.sql.Date.valueOf(sValue);
-            declaracao.setDate(8, data);
+            declaracao.setString(8, livro.getEditora());
             declaracao.execute();
 
             // Fecha a conexao.
@@ -77,7 +75,7 @@ public class LivroDAO implements IDAO{
             // Abre uma conexao com o banco.
             Connection conexao = ConexaoPostgres.getConexao();
 
-            String instrucaoSQL = "update livro set titulo=?, ano=?, edicao=?, isbn=?, paginas=?, sinopse=?, status=? where id_livro=?";
+            String instrucaoSQL = "update livro set titulo=?, ano=?, edicao=?, isbn=?, paginas=?, sinopse=?, status=?, editora=? where id_livro=?";
             PreparedStatement declaracao = conexao.prepareStatement(instrucaoSQL);
             declaracao.setString(1, livro.getTitulo());
             declaracao.setInt(2, livro.getAno());
@@ -86,7 +84,8 @@ public class LivroDAO implements IDAO{
             declaracao.setInt(5, livro.getPaginas());
             declaracao.setString(6, livro.getSinopse());
             declaracao.setString(7, livro.getStatus());
-            declaracao.setInt(8, Integer.valueOf(livro.getIdLivro()));
+            declaracao.setString(8, livro.getEditora());
+            declaracao.setInt(9, Integer.valueOf(livro.getIdLivro()));
             declaracao.execute();
 
             // Fecha a conexao.
@@ -106,7 +105,7 @@ public class LivroDAO implements IDAO{
             // Abre uma conexao com o banco.
             Connection conexao = ConexaoPostgres.getConexao();
 
-            String instrucaoSQL = "select id_livro, titulo, ano, edicao, isbn, paginas, sinopse, status from livro where id_livro=" + id;
+            String instrucaoSQL = "select id_livro, titulo, ano, edicao, isbn, paginas, sinopse, status, editora from livro where id_livro=" + id;
             PreparedStatement declaracao = conexao.prepareStatement(instrucaoSQL);
             ResultSet resultado = declaracao.executeQuery();
             if (resultado.next()) {
@@ -119,6 +118,7 @@ public class LivroDAO implements IDAO{
                 livro.setPaginas(resultado.getInt("paginas"));
                 livro.setSinopse(resultado.getString("sinopse"));
                 livro.setStatus(resultado.getString("status"));
+                livro.setEditora(resultado.getString("editora"));
             }
 
             // Fecha a conexao.
@@ -139,7 +139,7 @@ public class LivroDAO implements IDAO{
             // Abre uma conexao com o banco.
             Connection conexao = ConexaoPostgres.getConexao();
 
-            String instrucaoSQL = "select id_livro, titulo, ano, edicao, isbn, paginas, sinopse, status from livro";
+            String instrucaoSQL = "select id_livro, titulo, ano, edicao, isbn, paginas, sinopse, status, editora from livro";
             PreparedStatement declaracao = conexao.prepareStatement(instrucaoSQL);
             ResultSet resultado = declaracao.executeQuery();
             livros = new ArrayList<>();
@@ -153,6 +153,7 @@ public class LivroDAO implements IDAO{
                 livro.setPaginas(resultado.getInt("paginas"));
                 livro.setSinopse(resultado.getString("sinopse"));
                 livro.setStatus(resultado.getString("status"));
+                livro.setEditora(resultado.getString("editora"));
                 livros.add(livro);
             }
 

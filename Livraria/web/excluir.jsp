@@ -9,15 +9,17 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
          <title>Exclusão</title>
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style/bootstrap/css/bootstrap.css">
     </head>
     <body>
-       
-        <%
+        <div class="container">	
+            <%
             String[] ids = (String[]) request.getParameterValues("id");
             if (ids == null){
                 %>
                 <h3>Livro não selecionado.</h3>
-                <a href='Livros'><input type="button" name="cancelar" id="cancelar" value=" Voltar "></a>
+                <a href='Livros'><input type="button" class="btn" value=" Voltar "></a>
                 <%
             }  
             else {
@@ -30,11 +32,15 @@
                         out.println("<input type='hidden' name='id' value='" + id + "' />");     
                        }
                  %>
-                <input type="submit" name="excluir" id="excluir" value=" Sim ">
-                <a href='Livros'><input type="button" name="cancelar" id="cancelar" value=" Não "></a>
+                <input type="submit" class="btn" name="excluir" id="excluir" value=" Sim ">
+                <a href='Livros'><input type="button" class="btn" value=" Não "></a>
                 </form>
                  <%
               }
              %>
+        </div>    
+         <script src="style/bootstrap/js/jquery.js"></script>
+        <script src="style/bootstrap/js/popper.js"></script>
+        <script src="style/bootstrap/js/bootstrapjs"></script>
     </body>
 </html>

@@ -23,6 +23,7 @@ public class InserirLivro extends HttpServlet {
             throws ServletException, IOException {
         
         String titulo = request.getParameter("titulo");
+        String editora = request.getParameter("editora");
         int ano = Integer.parseInt(request.getParameter("ano"));
         int edicao = Integer.parseInt(request.getParameter("edicao"));
         String isbn = request.getParameter("isbn");
@@ -32,6 +33,7 @@ public class InserirLivro extends HttpServlet {
                
         Livro livro = new Livro();
         livro.setTitulo(titulo);
+        livro.setEditora(editora);
         livro.setAno(ano);
         livro.setEdicao(edicao);
         livro.setISBN(isbn);

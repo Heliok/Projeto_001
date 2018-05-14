@@ -14,6 +14,6 @@ public class ConexaoPostgres {
         // Define um driver de conexao com o banco.
         Class.forName("org.postgresql.Driver");
         // Abre uma conexao com o banco.
-        return DriverManager.getConnection("jdbc:postgresql://localhost:5432/livraria", "postgres", "1234");
+        return DriverManager.getConnection("jdbc:postgresql://localhost:5432/livraria", "#", "#");
     }
 }

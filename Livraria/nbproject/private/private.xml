@@ -3,21 +3,29 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group name="Aula03">
+            <file>file:/E:/_FATEC%20ADS/_Hisakazu/teste_livro/Nova%20pasta/Livraria/web/index.jsp</file>
+            <file>file:/E:/_FATEC%20ADS/_Hisakazu/teste_livro/Nova%20pasta/Livraria/web/inserir.jsp</file>
+            <file>file:/E:/_FATEC%20ADS/_Hisakazu/teste_livro/Nova%20pasta/Livraria/web/atualizar.jsp</file>
+            <file>file:/E:/_FATEC%20ADS/_Hisakazu/teste_livro/Nova%20pasta/Livraria/web/style/bootstrap/css/bootstrap.css</file>
+        </group>
+        <group>
+            <file>file:/E:/_FATEC%20ADS/_Hisakazu/teste_livro/Nova%20pasta/Livraria/src/java/br/com/livraria/dominio/Autor.java</file>
             <file>file:/E:/_FATEC%20ADS/_Hisakazu/teste_livro/Nova%20pasta/Livraria/src/java/br/com/livraria/servlet/InserirLivro.java</file>
             <file>file:/E:/_FATEC%20ADS/_Hisakazu/teste_livro/Nova%20pasta/Livraria/src/java/br/com/livraria/servlet/PreAtualizarLivro.java</file>
+            <file>file:/E:/_FATEC%20ADS/_Hisakazu/teste_livro/Nova%20pasta/Livraria/src/java/br/com/livraria/dominio/Categoria.java</file>
             <file>file:/E:/_FATEC%20ADS/_Hisakazu/teste_livro/Nova%20pasta/Livraria/web/sucesso.jsp</file>
-            <file>file:/E:/_FATEC%20ADS/_Hisakazu/teste_livro/Nova%20pasta/Livraria/src/java/br/com/livraria/DAO/FabricaDAO.java</file>
             <file>file:/E:/_FATEC%20ADS/_Hisakazu/teste_livro/Nova%20pasta/Livraria/src/java/br/com/livraria/servlet/Livros.java</file>
             <file>file:/E:/_FATEC%20ADS/_Hisakazu/teste_livro/Nova%20pasta/Livraria/src/java/br/com/livraria/servlet/AtualizarLivro.java</file>
-            <file>file:/E:/_FATEC%20ADS/_Hisakazu/teste_livro/Nova%20pasta/Livraria/src/java/br/com/livraria/servlet/ExcluirLivro.java</file>
             <file>file:/E:/_FATEC%20ADS/_Hisakazu/teste_livro/Nova%20pasta/Livraria/web/excluir.jsp</file>
-            <file>file:/E:/_FATEC%20ADS/_Hisakazu/teste_livro/Nova%20pasta/Livraria/src/java/br/livraria/util/ConexaoPostgres.java</file>
+            <file>file:/E:/_FATEC%20ADS/_Hisakazu/teste_livro/Nova%20pasta/Livraria/src/java/br/com/livraria/servlet/ExcluirLivro.java</file>
             <file>file:/E:/_FATEC%20ADS/_Hisakazu/teste_livro/Nova%20pasta/Livraria/web/index.jsp</file>
+            <file>file:/E:/_FATEC%20ADS/_Hisakazu/teste_livro/Nova%20pasta/Livraria/src/java/br/livraria/util/ConexaoPostgres.java</file>
             <file>file:/E:/_FATEC%20ADS/_Hisakazu/teste_livro/Nova%20pasta/Livraria/web/inserir.jsp</file>
             <file>file:/E:/_FATEC%20ADS/_Hisakazu/teste_livro/Nova%20pasta/Livraria/web/erro.jsp</file>
             <file>file:/E:/_FATEC%20ADS/_Hisakazu/teste_livro/Nova%20pasta/Livraria/src/java/br/com/livraria/dominio/Livro.java</file>
-            <file>file:/E:/_FATEC%20ADS/_Hisakazu/teste_livro/Nova%20pasta/Livraria/src/java/br/com/livraria/DAO/LivroDAO.java</file>
             <file>file:/E:/_FATEC%20ADS/_Hisakazu/teste_livro/Nova%20pasta/Livraria/web/atualizar.jsp</file>
+            <file>file:/E:/_FATEC%20ADS/_Hisakazu/teste_livro/Nova%20pasta/Livraria/src/java/br/com/livraria/DAO/LivroDAO.java</file>
+            <file>file:/E:/_FATEC%20ADS/_Hisakazu/teste_livro/Nova%20pasta/Livraria/web/style/bootstrap/css/bootstrap.css</file>
         </group>
     </open-files>
 </project-private>
